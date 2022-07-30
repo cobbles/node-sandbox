@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const isDevelopment = process.env.NODE_ENV !== 'production';
+const isCodeCoverage = process.env.CODE_COVERAGE === 'true';
 
 module.exports = {
   mode: isDevelopment ? 'development' : 'production',
@@ -12,9 +13,7 @@ module.exports = {
   },
   resolve: {
     extensions: [
-      '.tsx',
-      '.ts',
-      '.js'
+      '.tsx','.ts','jsx','.js','.json'
     ]
   },
   module: {
@@ -27,9 +26,26 @@ module.exports = {
         ]
       },
       {
-        test: /\.ts(x)?$/,
-        loader: 'ts-loader',
-        exclude: /node_modules/
+        test: /\.tsx?$/,
+        use: [
+          {
+            loader: 'babel-loader',
+            options: {
+              presets: [
+                '@babel/preset-env',
+                '@babel/typescript',
+                [
+                  '@babel/preset-react',
+                  {
+                    development: isDevelopment,
+                  },
+                ],
+              ],
+              plugins: isCodeCoverage ? ['istanbul'] : [],
+              babelrc: false,
+            },
+          },
+        ],
       },
       {
         test: /\.svg$/,
