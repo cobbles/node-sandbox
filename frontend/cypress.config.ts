@@ -9,7 +9,6 @@ export default defineConfig({
     setupNodeEvents (on, config) {
       registerCodeCoverageTasks(on, config)
       return config
-      // implement node event listeners here
     },
   },
 
@@ -18,7 +17,6 @@ export default defineConfig({
     setupNodeEvents (on, config) {
       registerCodeCoverageTasks(on, config)
       return config
-      // implement node event listeners here
     },
   },
 })

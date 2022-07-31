@@ -1,0 +1,8 @@
+{
+  "recommendations": [
+    "dbaeumer.vscode-eslint",
+    "planbcoding.vscode-react-refactor",
+    "formulahendry.auto-rename-tag",
+    "ms-azuretools.vscode-docker"
+  ]
+}
