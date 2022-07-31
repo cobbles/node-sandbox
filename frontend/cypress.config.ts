@@ -6,16 +6,16 @@ export default defineConfig({
       framework: 'react',
       bundler: 'webpack',
     },
-    setupNodeEvents(on, config) {
+    setupNodeEvents (on, config) {
       registerCodeCoverageTasks(on, config)
       return config
       // implement node event listeners here
-    }
+    },
   },
 
   e2e: {
     baseUrl: 'http://localhost:8080',
-    setupNodeEvents(on, config) {
+    setupNodeEvents (on, config) {
       registerCodeCoverageTasks(on, config)
       return config
       // implement node event listeners here

@@ -13,8 +13,8 @@ module.exports = {
   },
   resolve: {
     extensions: [
-      '.tsx','.ts','jsx','.js','.json'
-    ]
+      '.tsx', '.ts', 'jsx', '.js', '.json',
+    ],
   },
   module: {
     rules: [
@@ -22,8 +22,8 @@ module.exports = {
         test: /\.css$/,
         use: [
           'style-loader',
-          'css-loader'
-        ]
+          'css-loader',
+        ],
       },
       {
         test: /\.tsx?$/,
@@ -49,9 +49,9 @@ module.exports = {
       },
       {
         test: /\.svg$/,
-        use: 'file-loader'
-      }
-    ]
+        use: 'file-loader',
+      },
+    ],
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -84,7 +84,7 @@ module.exports = {
     },
   },
   performance: {
-    hints: isDevelopment ? false : 'warning'
+    hints: isDevelopment ? false : 'warning',
   },
   devServer: {
     hot: true,

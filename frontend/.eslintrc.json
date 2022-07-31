@@ -51,6 +51,10 @@
         "space-before-function-paren": ["error"],
         "switch-colon-spacing": ["error"],
         "space-infix-ops": ["error"]
-
+    },
+    "settings": {
+        "react": {
+          "version": "detect"
+        }
     }
 }

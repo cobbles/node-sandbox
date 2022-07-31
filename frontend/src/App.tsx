@@ -1,6 +1,4 @@
 import * as React from 'react'
-import { func } from './File'
-import { func1 } from './File'
 interface IProps {
     name?: string
 }
