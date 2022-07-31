@@ -1,13 +1,13 @@
-import { defineConfig } from "cypress";
-
+import { defineConfig } from 'cypress'
+import * as registerCodeCoverageTasks from '@cypress/code-coverage/task'
 export default defineConfig({
   component: {
     devServer: {
-      framework: "react",
-      bundler: "webpack",
+      framework: 'react',
+      bundler: 'webpack',
     },
     setupNodeEvents(on, config) {
-      require('@cypress/code-coverage/task')(on, config)
+      registerCodeCoverageTasks(on, config)
       return config
       // implement node event listeners here
     }
@@ -16,9 +16,9 @@ export default defineConfig({
   e2e: {
     baseUrl: 'http://localhost:8080',
     setupNodeEvents(on, config) {
-      require('@cypress/code-coverage/task')(on, config)
+      registerCodeCoverageTasks(on, config)
       return config
       // implement node event listeners here
     },
   },
-});
+})

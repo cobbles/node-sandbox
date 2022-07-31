@@ -1,12 +1,12 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+import * as path from 'path'
+import * as HtmlWebpackPlugin from 'html-webpack-plugin'
 
-const isDevelopment = process.env.NODE_ENV !== 'production';
-const isCodeCoverage = process.env.CODE_COVERAGE === 'true';
+const isDevelopment = process.env.NODE_ENV !== 'production'
+const isCodeCoverage = process.env.CODE_COVERAGE === 'true'
 
 module.exports = {
   mode: isDevelopment ? 'development' : 'production',
-  entry: path.resolve(__dirname, "src/index.tsx"),
+  entry: path.resolve(__dirname, 'src/index.tsx'),
   output: {
     filename: '[name].[contenthash].bundle.js',
     chunkFilename: '[contenthash].bundle.js',
@@ -55,7 +55,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-        template: path.join(__dirname, "public", "index.html"),
+      template: path.join(__dirname, 'public', 'index.html'),
     }),
   ],
   optimization: {
@@ -84,9 +84,9 @@ module.exports = {
     },
   },
   performance: {
-    hints: isDevelopment ? false : "warning"
+    hints: isDevelopment ? false : 'warning'
   },
   devServer: {
     hot: true,
   },
-};
+}
