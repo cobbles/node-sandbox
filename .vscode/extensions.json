@@ -3,6 +3,7 @@
     "dbaeumer.vscode-eslint",
     "planbcoding.vscode-react-refactor",
     "formulahendry.auto-rename-tag",
-    "ms-azuretools.vscode-docker"
+    "ms-azuretools.vscode-docker",
+    "apollographql.vscode-apollo"
   ]
 }
