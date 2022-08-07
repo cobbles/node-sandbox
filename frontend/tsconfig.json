@@ -12,6 +12,7 @@
     "jsx": "react",
   },
   "include": [
-    "./**/*"
+    "src/**/*",
+    "webpack.config.ts"
   ]
 }

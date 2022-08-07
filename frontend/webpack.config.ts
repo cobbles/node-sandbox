@@ -1,5 +1,6 @@
-import * as path from 'path'
-import * as HtmlWebpackPlugin from 'html-webpack-plugin'
+/* eslint-disable @typescript-eslint/no-var-requires */
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const path = require('path')
 
 const isDevelopment = process.env.NODE_ENV !== 'production'
 const isCodeCoverage = process.env.CODE_COVERAGE === 'true'
